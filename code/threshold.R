@@ -43,13 +43,13 @@ levels(pers.long4$CU)<- CU.levels
 
 ggplot(pers.long4) + 
   geom_col(aes(x = CU, y = Probability,fill = Strategy)) + 
-  scale_y_continuous(limits = c(0,100), breaks= c(0, 20, 40, 60, 80, 100), expand = c(0,0)) +
+  scale_y_continuous(limits = c(0,100), breaks= c(0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100), expand = c(0,0)) +
   xlab("Conservation Unit") + 
   ylab("Chance of green status assessment") +
-  theme(axis.text.x = element_text(angle = 75, size = 10, hjust = 1),axis.text.y = element_text(size = 10), axis.title = element_text(size = 11), plot.margin = margin(0,0,0,0, "cm")) + 
-  geom_hline(yintercept = 50, colour = "black", linetype = 2) +
+  theme(axis.text.x = element_text(angle = 75, size = 10, hjust = 1),axis.text.y = element_text(size = 10), axis.title = element_text(size = 11), panel.grid.major.x = element_blank(), plot.margin = margin(0,0,0,0, "cm")) + 
+  geom_hline(yintercept = 50, colour = "red", linetype = 2) +
   geom_hline(yintercept = 60, colour = "black", linetype = 2) +
-  scale_fill_manual(labels = c("With Co-governance", "With Management", "Business As Usual"), values = c('#BB69AD','#117733','#44AA99')) +
+  scale_fill_manual(labels = c("With Co-governance", "With All Strategies", "Business As Usual"), values = c('#BB69AD','#117733','#44AA99')) +
   theme(legend.position = "top", legend.text = element_text(size = 11), legend.title = element_blank(), legend.key.size = unit(8, "point"), legend.box.margin = margin(0,0,0,0)) 
   
 
